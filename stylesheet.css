@@ -1,15 +1,14 @@
 .en_tete {
     display: flex;
-    justify-content: space-between; /* Espace entre les éléments */
-    align-items: center; /* Aligne verticalement au centre */
-    padding: 1em;
+    justify-content: space-between; 
+    align-items: center; 
     font-family:"Yeseva One", sans-serif;
     font-size: 0.6em;
     color: white;
 }
 .reseaux {
-    display: flex; /* Aligne les icônes en ligne */
-    gap: 1em;/* Espace entre les icônes */
+    display: flex; 
+    gap: 1em;
     font-size:1.4em;
 }
 h2{
@@ -28,88 +27,27 @@ body{
 .description{
     color : rgba(92,107,114,255);
     font-family: "Montserrat",sans-serif;
-    margin-left: 6.1em;  /*on laisse une marge à gauche*/
-}
+    margin-left: 6.1em;}  
 nav{
     color : white;
     font-size: 0.8em;
-    font-family: "Montserrat",sans-serif; /*on applique une police*/
-    display: flex;
-    justify-content: center;/*on aligne les éléments du menu de navigation*/
+    font-family: "Montserrat",sans-serif; 
+    justify-content: center;
     margin-top: 1.2em;
     margin-bottom: 1.5em;
-    gap: 0.6em;/*on espace les éléments du menu*/
-}
+    gap: 0.6em;}
 .nature, .portrait, .animaux, .art, .urbain{
-    padding: 0.2em;/*les bords du background ne touche pas directement*/
-}
+    padding: 0.2em;}
 .art:hover, .nature:hover,.portrait:hover,.urbain:hover,.animaux:hover{
-    background-color: #21d399;/*lorsqu'on passe la souris un fond d'écran apparaît sur le texte*/
-}
+    background-color: #21d399;}
 footer{
     color: rgba(92,107,114,255);
     display: flex;
-    justify-content:center;  /*on affiche les crédits au centre du bas de page*/  
+    justify-content:center;  
 }
 .type{
     display: flex;
     justify-content: center;
-    font-size: 0.80em; /*on centre et on modifie la taille de "Exercice HTML-CSS*/
-    
-}
-/*responsuve ordi*/
-@media  screen and (min-width:1025px) {
-    .galeie{
-        display: grid;     /*on initialise grid pour mettre en forme les images*/
-        grid-template-columns: repeat(4,1fr); /*on crée 4 colonnes de taille 1 fraction chacune (repeat permet de simplier au lieu d'ecrire 1fr 1fr 1fr 1fr*/
-        grid-template-rows: repeat(6,1fr);
-        justify-items: center;/*on centre le grid au milieu de la page*/
-        gap:0.6em;/*on laisse de l'espace entre les images*/
-   
-    }  
-}
-/*responsive tablette*/
-@media screen and (min-width:768px) and (max-width:1024px){  
-    .galeie{
-        display: grid;
-        grid-template-columns:repeat(5,1fr);/*On crée 5 colonnes (donc 5 images)*/
-        grid-template-rows: repeat(3,1fr);
-        gap: 0.6em;
-        justify-items: center;
-        
-    }
-    .galerie img:nth-child(n +15) {/*on affiche que 9 images, les autres sont cachées au delà*/
-          display: none;
-     }
-}
-/*responsive mobile*/
-@media screen and (max-width:767px) {
-    .galeie{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);/*on crée 3 colonnes */
-        grid-template-rows: repeat(3,1fr);
-        gap:0.6em;
-        justify-items:center;
-      
-
-    }
-    .en_tete{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-    } 
-    
-    h2{
-        margin-left: 0.7em; /*on diminue la marge à gauche du titre*/
-    }
-    .description{
-        font-size: 1.2em;
-        margin-left: 0.7em;
-
-    }
-    .galerie img:nth-child(n + 9) {/*on affiche que 9 photos*/
-          display: none; 
-    }
+    font-size: 0.80em; 
     
 }
